@@ -3,6 +3,7 @@ This repository consists of divergence-free H(div) numerical solvers for the inc
 
 ## Dependencies
 1. MFEM-4.1, you can read more [info](https://mfem.org) and [download](https://mfem.org/download).
+Add the code snippets given in the folder "add_to_mfem_lib" to the respective files in the MFEM source code.
 Follow the [instructions](https://mfem.org/building/) for the parallel-build of MFEM.
 This library further depends on many libraries, of which only the following are needed:
     1. Hypre, version - 2.10.0b
