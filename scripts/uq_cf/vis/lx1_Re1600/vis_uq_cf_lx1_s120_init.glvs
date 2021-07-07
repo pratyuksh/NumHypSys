@@ -1,0 +1,46 @@
+# Visualization window geometry
+window 0 0 1600 1200
+
+# Initial solution
+solution ../../../../output/uq_pincompNS_cf/Re1600/samples120/mesh_lx1_init ../../../../output/uq_pincompNS_cf/Re1600/samples120/stats/vxMean_lx1_init
+
+# Setup the GLVis scene. Executed after pressing the space bar.
+{
+   perspective off
+   view 0 0
+   viewcenter 0 0
+   zoom 1.4
+   light off
+   scale 2
+   translate -0.3 0 0
+   valuerange 0 1.5
+   # palette 26
+   keys mmmc
+}
+
+# Take multiple screenshots. Executed after pressing the space bar.
+{   
+   solution ../../../../output/uq_pincompNS_cf/Re1600/samples120/mesh_lx1_init ../../../../output/uq_pincompNS_cf/Re1600/samples120/stats/vxMean_lx1_init
+   scale 2
+   #valuerange 0 1.5
+   screenshot ../../../../figures/uq_incompNS/uq_cf/Re1600/vis_raw/vxMean_lx1_init_samples120.png
+   
+   solution ../../../../output/uq_pincompNS_cf/Re1600/samples120/mesh_lx1_init ../../../../output/uq_pincompNS_cf/Re1600/samples120/stats/vyMean_lx1_init
+   scale 2
+   #valuerange -0.0016 0.00087
+   screenshot ../../../../figures/uq_incompNS/uq_cf/Re1600/vis_raw/vyMean_lx1_init_samples120.png
+   
+   solution ../../../../output/uq_pincompNS_cf/Re1600/samples120/mesh_lx1_init ../../../../output/uq_pincompNS_cf/Re1600/samples120/stats/vxVariance_lx1_init
+   scale 2
+   #valuerange 0 0.0009
+   screenshot ../../../../figures/uq_incompNS/uq_cf/Re1600/vis_raw/vxVariance_lx1_init_samples120.png
+   
+   solution ../../../../output/uq_pincompNS_cf/Re1600/samples120/mesh_lx1_init ../../../../output/uq_pincompNS_cf/Re1600/samples120/stats/vyVariance_lx1_init
+   scale 2
+   #valuerange 0 2.15E-5
+   screenshot ../../../../figures/uq_incompNS/uq_cf/Re1600/vis_raw/vyVariance_lx1_init_samples120.png
+   
+   valuerange 0 3E-6
+   screenshot ../../../../figures/uq_incompNS/uq_cf/Re1600/vis_raw/vyVariance_lx1_init_samples120_rescaled.png
+}
+

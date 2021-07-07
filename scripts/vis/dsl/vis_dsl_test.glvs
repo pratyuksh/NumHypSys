@@ -1,0 +1,28 @@
+# Visualization window geometry
+window 0 0 1600 1200
+
+# Initial solution
+solution ../../../output/data/incompNS_dsl_quadMesh_upwind/pmesh_lx4 ../../../output/data/incompNS_dsl_quadMesh_upwind/vorticity_lx4_tId_0
+
+# Setup the GLVis scene. Executed after pressing the space bar.
+{
+   perspective off
+   view 0 0
+   viewcenter 0 0
+   zoom 1.4
+   light off
+   scale 1.3
+   keys mmm
+}
+
+# Take multiple screenshots. Executed after pressing the space bar.
+{  
+   solution ../../../output/data/incompNS_dsl_quadMesh_upwind/pmesh_lx4 ../../../output/data/incompNS_dsl_quadMesh_upwind/vorticity_lx4_tId_0
+   scale 1.3
+   screenshot ../../../figures/fluid_flow_init.png
+ 
+   solution ../../../output/data/incompNS_dsl_quadMesh_upwind/pmesh_lx4 ../../../output/data/incompNS_dsl_quadMesh_upwind/vorticity_lx4_tId_896
+   scale 1.3
+   screenshot ../../../figures/fluid_flow.png
+}
+

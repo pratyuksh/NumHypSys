@@ -1,0 +1,48 @@
+# Visualization window geometry
+window 0 0 1600 1200
+
+# Initial solution
+solution ../../../output/data/incompNS_cf_nu1E-3/pmesh_lx5 ../../../output/data/incompNS_cf_nu1E-3/vx_lx5_tId_0
+
+# Setup the GLVis scene. Executed after pressing the space bar.
+{
+   perspective off
+   view 0 0
+   viewcenter 0 0
+   zoom 1.4
+   light off
+   scale 3
+   translate -0.3 0 0
+   valuerange 0 1.5
+   palette 26
+   keys mmmc
+}
+
+# Take multiple screenshots. Executed after pressing the space bar.
+{   
+   solution ../../../output/data/incompNS_cf_nu1E-3/pmesh_lx5 ../../../output/data/incompNS_cf_nu1E-3/vx_lx5_tId_0
+   scale 2
+   valuerange 0 1.5
+   screenshot ../../../figures/vx_lx5_t0.png
+   
+   solution ../../../output/data/incompNS_cf_nu1E-3/pmesh_lx5 ../../../output/data/incompNS_cf_nu1E-3/vx_lx5_tId_200
+   scale 2
+   valuerange 0 1.5
+   screenshot ../../../figures/vx_lx5_t0pt25.png
+   
+   solution ../../../output/data/incompNS_cf_nu1E-3/pmesh_lx5 ../../../output/data/incompNS_cf_nu1E-3/vx_lx5_tId_400
+   scale 2
+   valuerange 0 1.5
+   screenshot ../../../figures/vx_lx5_t0pt50.png
+   
+   solution ../../../output/data/incompNS_cf_nu1E-3/pmesh_lx5 ../../../output/data/incompNS_cf_nu1E-3/vx_lx5_tId_600
+   scale 2
+   valuerange 0 1.5
+   screenshot ../../../figures/vx_lx5_t0pt75.png
+   
+   solution ../../../output/data/incompNS_cf_nu1E-3/pmesh_lx5 ../../../output/data/incompNS_cf_nu1E-3/vx_lx5_tId_800
+   scale 2
+   valuerange 0 1.5
+   screenshot ../../../figures/vx_lx5_t1.png
+}
+
